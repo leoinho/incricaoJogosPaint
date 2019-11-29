@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+.formTotal {
+  
+}
+.logo{
+  position: absolute;
+  width: 34%;
+  height: 54%;
+  background-image: url(image.jfif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 0;
+}
+.card-containerJS{
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  background-color: black;
+}
+.card-containerJS img {
+  position: absolute;
+  width: 98px;
+  height: 96px;
+  top: 2px;
+  right: 15px;
+    border: solid 1px;
+    border-radius: 49px;
+}
+
+.card {
+  margin-top: 15px;
+}
+.form {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  border: solid 1px;
+  border-radius: 8px;
+  padding: 20px;
+}
+.file_customizada::-webkit-file-upload-button {
+  
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.file_customizada:hover::before {
+  border-color: black;
+}
+.file_customizada:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+label.labelInput input[type="file"] {
+  position: fixed;
+  top: -1000px;
+}
+
+labelInput {
+  border: 2px solid #AAA;
+  border-radius: 4px;
+  padding: 2px 5px;
+  margin: 2px;
+  background: #DDD;
+  display: inline-block;
+}
+
+
+
+.labelInput :valid + span {
+  color:black;
+  border: solid 2px;
+    border-radius: 4px;
+    padding: 6px;
+}
+@media (max-width: 800px) {
+  .formTotal {
+    flex-direction: column-reverse;
+    padding: 3px;
+  }
+  .expandiMobile{
+    max-width: 100%;
+  }
+  .container-fluid{
+    padding:0;
+  }
+  .card-containerJS{
+    font-size: 19px;
+  }
+  .card-containerJS img {
+    position: relative;
+    position: relative;
+    width: 98px;
+    height: 96px;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 49px;
+    margin: auto;
+  }
+}
