@@ -10,7 +10,7 @@ var uid = firebase
 
 var stringInput = document.getElementById("string-input");
 var foto = "";
-
+$("#textFoto2").hide();
 stringInput.onchange = function(event) {
   var arquivo = event.target.files[0];
 
@@ -29,6 +29,8 @@ stringInput.onchange = function(event) {
           .then(url => {
             console.log("string para dowload", url);
             foto = url;
+            $("#textFoto1").hide();
+            $("#textFoto2").show();
           });
       });
   };
@@ -82,11 +84,14 @@ function criarCard() {
   console.log("card " + JSON.stringify(card));
   document.getElementById("nome").value = "";
   document.getElementById("select").value = "";
-  swal({
-    title: "Inscrição aceita!!",
-    icon: "success"
+
+  ref.push(card).then(() => {
+    //window.location.reload();
+    swal({
+      title: "Inscrição aceita!!",
+      icon: "success"
+    });
   });
-  ref.push(card);
 }
 
 function deletar(id) {
