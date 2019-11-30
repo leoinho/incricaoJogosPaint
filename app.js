@@ -48,10 +48,11 @@ function criarCard() {
   } else if (select.value == "") {
     swal({ title: "Nos diga seu equipamento!!" });
     return false;
-  } else if (foto == "") {
-    swal({ title: "Selecione sua foto!!" });
-    return false;
   }
+  // } else if (foto == "") {
+  //   swal({ title: "Selecione sua foto!!" });
+  //   return false;
+  // }
 
   console.log("select.value " + select.value);
   switch (select.value) {
